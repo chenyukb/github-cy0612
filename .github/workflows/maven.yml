@@ -30,9 +30,6 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
       
-    - name: Java Automatic Release
-      uses: Fulminazzo/java-automatic-release@v2
-      with:
-        # The Java version to use when setting up Java.
-        java-version: 8
+    - name: Run the Java application  
+      run: java -jar target/your-java-application.jar
           
