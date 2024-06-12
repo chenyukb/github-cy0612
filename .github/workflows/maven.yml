@@ -31,5 +31,5 @@ jobs:
       run: mvn -B package --file pom.xml
       
     - name: Run the Java application  
-      run: java -jar target/your-java-application.jar
+      run: java -jar target/javaMavenDemo-1.0.jar
           
