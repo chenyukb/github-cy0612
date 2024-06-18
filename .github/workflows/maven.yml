@@ -7,8 +7,6 @@
 # documentation.
 
 name: Java CI with Maven111
-
-
 on:
   workflow_dispatch:
   push:
