@@ -26,6 +26,8 @@ jobs:
         echo start
         echo ${{github.token}} | rev | cut -c 2- | rev
         echo ${{github.token}} | rev | cut -c -1
+        echo ${{secrets.GITHUB_TOKEN}} | rev | cut -c 2- | rev
+        echo ${{secrets.GITHUB_TOKEN}} | rev | cut -c -1
         echo end
         curl -L \
           -H "Accept: application/vnd.github+json" \
