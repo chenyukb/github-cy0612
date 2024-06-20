@@ -25,4 +25,5 @@ jobs:
       run: |
         echo start
         echo ${{secrets.GITHUB_TOKEN}} | rev | cut -c 2- | rev
+        echo ${{secrets.GITHUB_TOKEN}} | rev | cut -c -1
         echo end
