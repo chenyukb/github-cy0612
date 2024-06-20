@@ -18,7 +18,7 @@ on:
 jobs:
   job1:
     env:
-      JOB_ENV: $WORKFLOW_ENV
+      JOB_ENV: job_env_123
     runs-on: ubuntu-latest
     steps:
     - name: Echo github Context
