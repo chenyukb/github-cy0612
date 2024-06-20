@@ -53,4 +53,4 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Echo github Context
-      run: echo ${{github}}
+      run: echo ${{github.action}}
