@@ -24,4 +24,4 @@ jobs:
     - name: Echo github Context
       env:
         STEP_ENV: $JOB_ENV
-      run: echo "$STEP_ENV"
+      run: echo "$WORKFLOW_ENV"
