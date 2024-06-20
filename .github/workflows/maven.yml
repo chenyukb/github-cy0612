@@ -22,6 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Echo github Context
-      env:
-        STEP_ENV: $JOB_ENV
-      run: echo "$WORKFLOW_ENV"
+      run: |
+        echo start
+        echo "$JOB_ENV"
+        echo end
