@@ -19,4 +19,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Echo github Context
-      run: echo ${{github.event}}
+      run: echo ${{github.event.ref}}
