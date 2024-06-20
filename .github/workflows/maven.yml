@@ -7,7 +7,8 @@
 # documentation.
 
 name: Java CI with Maven
-
+env:
+  WORKFLOW_ENV: workflow_env_1
 on:
   push:
     branches: [ "main" ]
@@ -16,7 +17,11 @@ on:
 
 jobs:
   job1:
+    env:
+      JOB_ENV: $WORKFLOW_ENV
     runs-on: ubuntu-latest
     steps:
     - name: Echo github Context
-      run: echo ${{toJSON(github)}}
+      env:
+        STEP_ENV: $JOB_ENV
+      run: echo $STEP_ENV
