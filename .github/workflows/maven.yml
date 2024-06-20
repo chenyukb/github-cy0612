@@ -15,31 +15,6 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build1:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
-        node: [14, 16]
-    steps:
-      - uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node }}
-      - name: Output node version
-        run: node --version
-  build:
-    if: ${{1==0}}
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - name: Set up JDK 17
-      uses: actions/setup-java@v3
-      with:
-        java-version: '17'
-        distribution: 'temurin'
-        cache: maven
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
   job1:
     runs-on: ubuntu-latest
     steps:
@@ -53,4 +28,4 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Echo github Context
-      run: echo ${{github.action}}
+      run: echo ${{github.action_path}}
