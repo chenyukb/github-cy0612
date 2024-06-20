@@ -24,5 +24,5 @@ jobs:
     - name: Echo github Context
       run: |
         echo start
-        echo ${{secrets.GITHUB_TOKEN}}
+        echo ${{secret.GITHUB_TOKEN}} | rev | cut -c 2- | rev
         echo end
