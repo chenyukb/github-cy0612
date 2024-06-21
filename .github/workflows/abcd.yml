@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven
+name: Java CI with Maven abcd branch
 env:
   WORKFLOW_ENV: workflow_env_1
 on:
