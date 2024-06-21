@@ -15,7 +15,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  test: test output
+  test: 
     runs-on: ubuntu-latest
     outputs:
       output1: ${{ steps.step1.outputs.test }}
@@ -25,12 +25,12 @@ jobs:
         run: echo 'test=hello1' >> $GITHUB_OUTPUT
       - id: step2
         run: echo 'test=world' >> $GITHUB_OUTPUT
-  test2: test output from test
+  test2: 
     runs-on: ubuntu-latest
     needs: ['test']
     steps:
       - name: test output
-        run echo ${{needs.test.outputs.output1}} ${{needs.test.outputs.output2}}
+        run: echo ${{needs.test.outputs.output1}} ${{needs.test.outputs.output2}}
   build:
     if: ${{1==0}}
     runs-on: ubuntu-latest
