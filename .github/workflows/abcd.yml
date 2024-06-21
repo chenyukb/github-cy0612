@@ -23,7 +23,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
     - name: get branch
-      run: git branch
+      run: git branch -a
     - name: Echo github Context
       run: |
         echo start
