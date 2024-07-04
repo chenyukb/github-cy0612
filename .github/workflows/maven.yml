@@ -7,6 +7,7 @@
 # documentation.
 
 name: Java CI with Maven
+run-name: sjsj
 env:
   WORKFLOW_ENV: workflow_env_1
 on:
