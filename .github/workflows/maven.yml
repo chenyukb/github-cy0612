@@ -6,7 +6,6 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-run-name: sjsj
 env:
   WORKFLOW_ENV: workflow_env_1
 on:
