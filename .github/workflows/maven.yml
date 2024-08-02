@@ -11,6 +11,7 @@ env:
   WORKFLOW_ENV: workflow_env_1
 on:
   push:
+    branches: ['main']
   workflow_dispatch:
   pull_request:
     branches: [ "main" ]
